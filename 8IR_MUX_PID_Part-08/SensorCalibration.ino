@@ -1,8 +1,8 @@
 void calibrateSensor() {
   // Initialize calibration limits
   for (int i = 0; i < sensorNumber; i++) {
-    Max_ADC[i] = 0;     // Set the maximum ADC value for each sensor to 0 (lowest possible)
-    Min_ADC[i] = 1024;  // Set the minimum ADC value for each sensor to 1024 (highest possible, since ADC range is 0–1023)
+    Max_ADC[i] = 1024;     // Set the maximum ADC value for each sensor to 0 (lowest possible)
+    Min_ADC[i] = 0;  // Set the minimum ADC value for each sensor to 1024 (highest possible, since ADC range is 0–1023)
   }
   // Define rotation directions for calibration sweeps
   int rotationDirections[][2] = {
@@ -70,3 +70,4 @@ void LoadCalibration() {
   }
   Serial.println();  // Move to new line after printing all sensor values
 }
+
